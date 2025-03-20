@@ -1,8 +1,24 @@
 * {
   --primaryColor: #004080;
   --secondaryColor: #fff;
-  --primaryFont: "Arial";
-  --secondaryFont: "Sans";
+  --primaryFont: "Sans";
+  --secondaryFont: "SourceSerif4";
+  --primaryFontSize: 2rem;
+  --secondaryFontSize: 1rem;
+}
+@font-face {
+  font-family: "MarkaziText";
+  src: url("Fonts/MarkaziText.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Example for Roboto Bold */
+@font-face {
+  font-family: "SourceSerif4";
+  src: url("Fonts/SourceSerif4.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 body,
 h1,
@@ -16,7 +32,8 @@ ul {
 
 /* Global Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-size: var(--primaryFontSize);
+  font-family: var(--primaryFont);
   line-height: 1.6;
   color: #333;
   overflow-x: hidden;
@@ -41,6 +58,7 @@ header {
   justify-content: space-evenly;
   align-items: center;
   z-index: 1000;
+  font-size: var(--primaryFontSize);
 }
 header .container {
   margin: 0 10px;
@@ -128,6 +146,7 @@ nav ul li a {
 }
 
 .cta-button {
+  font-size: var(--secondaryFontSize);
   display: inline-block;
   text-align: center;
   background: var(--primaryColor);
