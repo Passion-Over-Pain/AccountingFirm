@@ -28,10 +28,6 @@ body {
   margin: 0 auto;
   max-width: 1200px;
 }
-section {
-  width: 100vw;
-  height: 100vh;
-}
 
 /* Header Styles */
 header {
@@ -75,12 +71,33 @@ nav ul li a {
 
 /* Hero Section Styles */
 .hero {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
   background-image: url(Images/hero-bg.jpeg);
   background-position: center;
   background-size: cover;
   color: #fff;
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+  min-height: 400px; /* Adjust as needed */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity (0.5 = 50% darkness) */
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1; /* Ensures text appears above the overlay */
 }
 
 .container {
@@ -111,6 +128,7 @@ nav ul li a {
 }
 
 .cta-button {
+  display: inline-block;
   text-align: center;
   background: var(--primaryColor);
   color: #fff;
@@ -120,12 +138,17 @@ nav ul li a {
   padding-right: 20px;
   text-decoration: none;
   font-weight: bold;
+  transition: transform 0.5s ease, background-color 0.5s ease, color 0.5s ease;
 }
-
-.hero-image img {
+.cta-button:hover {
+  background-color: var(--secondaryColor);
+  color: var(--primaryColor);
+  transform: scale(1.2);
+}
+/* .hero-image img {
   max-width: 100%;
   height: auto;
-}
+} */
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -148,14 +171,103 @@ section {
   padding: 60px 0;
 }
 
-.about,
-.services,
-.contact {
-  background: #f4f4f4;
+/* General styling for the About section */
+.about {
+  background-color: #f8f8f8;
+  padding: 80px 0;
+  color: #333;
 }
 
-.services .service-item {
+.about h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.about .intro {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.about .services {
+  display: grid;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 40px;
+  background-color: var(--primaryColor);
+}
+
+.service-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 30%;
+}
+.service-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.service-item h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.about .values {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about .values h3 {
+  font-size: 1.8rem;
+  color: #333;
   margin-bottom: 20px;
+}
+
+.about .values ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about .values ul li {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.about .closing {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .about .services {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .service-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .service-item {
+    width: 100%;
+  }
 }
 
 /* Footer Styles */
