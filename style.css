@@ -123,11 +123,11 @@ nav ul li a:hover {
 
 .hero .container {
   position: relative;
-  z-index: 1; /* Ensures text appears above the overlay */
+  z-index: 1;
 }
 
 .container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -212,7 +212,7 @@ section {
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Service Section <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 .about .services {
   display: grid;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
   margin-bottom: 40px;
 }
@@ -234,7 +234,7 @@ section {
 }
 .service-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
   margin-bottom: 40px;
 }
@@ -325,6 +325,17 @@ section {
   .hero-content {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .hero .container {
+    display: flex;
+    justify-content: center;
+  }
+  .holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
   }
 
   .hero-text {
