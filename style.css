@@ -234,9 +234,11 @@ section {
 }
 .service-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 20px;
   margin-bottom: 40px;
+  align-items: center;
+  text-align: center;
 }
 
 .service-item h3 {
@@ -366,10 +368,6 @@ section {
   .value-card {
     flex-direction: row;
     align-items: center;
-  }
-  .value-cards {
-    flex-direction: column;
-    gap: 30px;
   }
 }
 
