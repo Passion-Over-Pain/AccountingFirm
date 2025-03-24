@@ -346,7 +346,9 @@ section {
   }
 
   .service-item,
-  .value-card {
+  .value-card,
+  .closing,
+  .intro {
     width: 90%;
   }
 
