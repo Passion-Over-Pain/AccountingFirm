@@ -210,11 +210,22 @@ section {
   color: var(--primaryColor);
 }
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Service Section <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+/* Background box behind the services section */
+.services-background {
+  left: 0;
+  position: absolute; /* Position it behind the services section */
+  width: 100vw; /* Full viewport width */
+  height: 100%; /* Full height of the services section */
+  background-color: red; /* Use the primary color */
+  z-index: 1; /* Place it behind the services content */
+}
 .about .services {
   display: grid;
   justify-content: center;
   gap: 20px;
   margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
 }
 
 .service-item {
