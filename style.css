@@ -210,21 +210,41 @@ section {
   color: var(--primaryColor);
 }
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Service Section <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
-/* Background box behind the services section */
 .services-background {
   left: 0;
-  position: absolute; /* Position it behind the services section */
-  width: 100vw; /* Full viewport width */
-  height: 100%; /* Full height of the services section */
-  background-color: red; /* Use the primary color */
-  z-index: 1; /* Place it behind the services content */
+  position: absolute;
+  width: 100vw;
+  height: 500px;
+  background-color: var(--primaryColor);
+  z-index: 1;
 }
+
+.services-background::before,
+.services-background::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: white;
+  border-radius: 50% 50% 0 0;
+}
+
+.services-background::before {
+  top: -50px; /* Creates the top wave */
+  transform: rotate(180deg);
+}
+
+.services-background::after {
+  bottom: -50px; /* Creates the bottom wave */
+}
+
 .about .services {
   display: grid;
   justify-content: center;
   gap: 20px;
   margin-bottom: 40px;
-  position: relative;
+  position: relative; /* Required to keep the background box in position */
   z-index: 2;
 }
 
@@ -250,6 +270,7 @@ section {
   margin-bottom: 40px;
   align-items: center;
   text-align: center;
+  padding-top: 100px;
 }
 
 .service-item h3 {
@@ -367,6 +388,9 @@ section {
   .value-cards {
     flex-direction: column;
     gap: 30px;
+  }
+  .services-background {
+    height: 600px; /* Allow height to adjust for smaller screens */
   }
 
   .service-item,
