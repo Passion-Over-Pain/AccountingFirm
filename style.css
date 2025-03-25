@@ -228,6 +228,7 @@ section {
   height: 100px;
   background: white;
   border-radius: 50% 50% 0 0;
+  z-index: 1;
 }
 
 .services-background::before {
@@ -237,6 +238,7 @@ section {
 
 .services-background::after {
   bottom: -50px; /* Creates the bottom wave */
+  z-index: 1;
 }
 
 .about .services {
@@ -283,6 +285,10 @@ section {
   color: #666;
 }
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Value Cards <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+.values {
+  margin-top: 80px;
+  z-index: 2;
+}
 .value-cards {
   display: flex;
   justify-content: space-between;
@@ -408,9 +414,89 @@ section {
 
 /* Footer Styles */
 footer {
-  font-size: var(--secondaryFontSize);
   background: #333;
   color: #fff;
+  padding: 40px 20px;
+  font-size: var(--secondaryFontSize);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* About Section */
+.footer-about {
+  flex: 1;
+  max-width: 300px;
+}
+
+.footer-logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.footer-about p {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* Quick Links */
+.footer-links {
+  flex: 1;
+  min-width: 150px;
+}
+
+.footer-links h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  color: var(--primaryColor);
+}
+
+/* Google Map */
+.footer-map {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-map h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-map iframe {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
   text-align: center;
-  padding: 20px 0;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  border-top: 1px solid #555;
+  padding-top: 15px;
+  color: #ccc;
 }
