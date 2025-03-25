@@ -42,6 +42,9 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .container {
   width: 80%;
@@ -53,7 +56,7 @@ body {
 header {
   width: 100vw;
   position: fixed;
-  background: var(--primaryColor) 0;
+  background: black 0;
   color: #fff;
   padding: 10px 0;
   height: fit-content;
@@ -93,7 +96,7 @@ nav ul li a {
   transition: color 0.5 ease;
 }
 nav ul li a:hover {
-  color: var(--secondaryColor);
+  color: var(--primaryColor);
 }
 
 /* Hero Section Styles */
@@ -414,7 +417,7 @@ section {
 
 /* Footer Styles */
 footer {
-  background: #333;
+  background: #000;
   color: #fff;
   padding: 40px 20px;
   font-size: var(--secondaryFontSize);
